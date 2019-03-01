@@ -1,0 +1,695 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.img-all {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.p-page-header {
+    position: fixed;
+    height: 72px;
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.6);
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(7, 7, 7, 0.6);
+    z-index: 9999;
+}
+
+.p-page-slider {
+    position: relative;
+    height: 768px;
+}
+
+.row .p-logo {
+    float: left;
+    padding-left: 80px;
+}
+
+.p-page-nav {
+    transition: all 0.3s ease;
+    padding: 20px;
+    margin-left: -100px;
+    font-family: "lato";
+}
+
+a.p-link-item {
+    text-decoration: none;
+}
+
+.p-item {
+    display: inline;
+    padding: 15px;
+    padding-top: 10px;
+}
+
+.p-link-item:hover {
+    font-weight: 700;
+    color: #4bcaff;
+}
+
+.p-link-item {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.p-item-slider img {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.p-item-content {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    width: 55%;
+}
+
+.p-item-btn {
+    position: absolute;
+    top: 54%;
+    right: 16%;
+}
+
+.p-item-btn .p-btn {
+    margin: 20px;
+    padding: 20px;
+    width: 186px;
+    border-radius: 8px;
+    background-color: rgba(114, 179, 204, 0);
+    border: 2px solid #fff;
+    color: white;
+}
+
+.p-page-features {
+    position: relative;
+    padding: 30px 0;
+}
+
+.p-page-features .p-heading {
+    display: block;
+    text-align: center;
+}
+
+.p-page-features .p-heading .p-title {
+    font-family: "lato";
+    font-size: 36px;
+    font-weight: 900;
+    color: #414042;
+}
+
+.p-page-features .p-heading .p-text {
+    font-family: "lato";
+    font-size: 20px;
+    font-weight: 300;
+    color: #414042;
+}
+
+.p-page-features .p-cards {
+    position: relative;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.p-page-features .p-cards .p-icon {
+    position: relative;
+    height: 170px;
+    width: 170px;
+    border-radius: 85px;
+    background-color: #4bcaff;
+    border: 4px solid #efefef;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.p-page-features .p-icon i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    font-size: 69px;
+    transform: translate(-50%, -50%);
+}
+
+.p-page-features .p-content {
+    margin-top: 10px;
+}
+
+.p-page-features .p-content .p-title {
+    font-size: 15px;
+    color: #414042;
+    font-family: "lato";
+    font-weight: 700;
+    text-align: center;
+}
+
+.p-page-features .p-content .p-text {
+    font-size: 13px;
+    line-height: 22px;
+    color: #838383;
+    font-family: "lato";
+    font-weight: 400;
+    text-align: center;
+}
+
+.p-page-features .p-cards:hover .p-icon {
+    background-color: #414042;
+}
+
+.p-page-features .p-content {
+    display: block;
+    text-align: center;
+}
+
+.p-page-features .p-cards:hover .p-content .p-title {
+    color: #4bcaff;
+}
+
+.p-page-gallery {
+    position: relative;
+    padding: 30px 0;
+}
+
+.p-page-gallery .p-heading {
+    display: block;
+    text-align: center;
+}
+
+.p-page-gallery .p-heading .p-title {
+    font-family: "lato";
+    font-size: 36px;
+    font-weight: 900;
+    color: #414042;
+}
+
+.p-page-gallery .p-heading .p-text {
+    font-family: "lato";
+    font-size: 20px;
+    font-weight: 300;
+    color: #414042;
+}
+
+.p-page-gallery .p-cards {
+    position: relative;
+    margin-top: 30px;
+    background: transparent;
+}
+
+.p-page-gallery .p-card-header {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    background: #4bcaff;
+}
+
+.p-page-gallery .p-card-header .p-images {
+    width: 100%;
+}
+
+.p-page-gallery .p-card-header .p-images img {
+    width: 100%;
+    opacity: 1;
+}
+
+.p-page-gallery .p-cards .p-card-header .p-icon-plus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.p-page-gallery .p-card-header .p-icon-plus i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.p-page-gallery .p-cards .p-card-header:hover .p-icon-plus {
+    visibility: visible;
+    opacity: 1;
+}
+
+.p-page-gallery .p-cards .p-card-header:hover img {
+    opacity: 0.5;
+}
+
+.p-page-gallery .p-cards .p-card-header .p-overlay {
+    position: absolute;
+    width: 100%;
+    height: 47px;
+    left: 0px;
+    padding: 5px;
+    background-color: rgba(25, 22, 24, 0.36);
+    bottom: 0px;
+}
+
+.p-page-gallery .p-cards .p-card-header .p-overlay .p-title {
+    font-size: 15px;
+    color: #4bcaff;
+    text-align: center;
+    font-family: "lato";
+    font-weight: 700;
+}
+
+.p-page-gallery .p-conntent {
+    position: relative;
+    padding: 10px;
+}
+
+.p-page-gallery .p-conntent .p-text {
+    font-size: 13px;
+    line-height: 22px;
+    color: #414042;
+    font-family: "lato";
+    font-weight: 400;
+    text-align: center;
+}
+
+.p-page-gallery {
+    position: relative;
+    padding: 30px 0;
+}
+
+.p-page-gallery .p-heading {
+    display: block;
+}
+
+.p-page-gallery .p-heading .p-title {
+    font-family: "lato";
+    font-size: 36px;
+    font-weight: 900;
+    color: #414042;
+}
+
+.p-page-gallery .p-heading .p-text {
+    font-family: "lato";
+    font-size: 20px;
+    font-weight: 300;
+    color: #414042;
+}
+
+.p-page-gallery .p-cards {
+    position: relative;
+    margin-top: 30px;
+    background: transparent;
+}
+
+.p-page-gallery .p-card-header {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    background: #4bcaff;
+}
+
+.p-page-gallery .p-card-header .p-images {
+    width: 100%;
+}
+
+.p-page-gallery .p-card-header .p-images img {
+    width: 100%;
+    opacity: 1;
+}
+
+.p-page-gallery .p-card-header .p-icon-plus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.p-page-gallery .p-card-header .p-icon-plus i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.p-page-gallery .p-card-header:hover .p-icon-plus {
+    visibility: visible;
+    opacity: 1;
+}
+
+.p-page-gallery .p-card-header:hover img {
+    opacity: 0.5;
+}
+
+.p-page-gallery .p-card-header .p-overlay {
+    position: absolute;
+    width: 100%;
+    height: 47px;
+    left: 0px;
+    padding: 5px;
+    background-color: rgba(25, 22, 24, 0.36);
+    bottom: 0px;
+}
+
+.p-page-gallery .p-card-header .p-overlay .p-title {
+    font-size: 15px;
+    color: #4bcaff;
+    text-align: center;
+    font-family: "lato";
+    font-weight: 700;
+}
+
+.p-page-gallery .p-conntent {
+    position: relative;
+    padding: 10px;
+}
+
+.p-page-gallery .p-conntent .p-text {
+    font-size: 13px;
+    line-height: 22px;
+    color: #414042;
+    font-family: "lato";
+    font-weight: 400;
+    text-align: center;
+}
+
+.p-page-video {
+    position: relative;
+    padding: 30px 0;
+    background-image: url(../images/banner1.png);
+    height: 500px;
+    text-align: center;
+}
+
+.p-page-video .p-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.p-page-video .p-content .p-btn-play {
+    position: relative;
+    background-color: rgba(114, 179, 204, 0);
+    width: 115px;
+    height: 74px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+.p-page-video .p-content .p-btn-play i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.p-page-video .p-content .p-title {
+    width: auto;
+    margin-top: 20px;
+    font-size: 48px;
+    color: #fff;
+    font-family: "lato";
+    font-weight: 300;
+}
+
+.p-page-video .p-content .p-title .p-current {
+    font-weight: 900;
+}
+
+.p-page-video .p-content .p-text {
+    width: 50%;
+    color: #fff;
+    font-family: "lato";
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.p-btn:hover {
+    background-color: #4bcaff;
+    border: 2px solid #4bcaff;
+}
+
+.p-page-prices {
+    position: relative;
+    padding: 30px 0;
+}
+
+.p-page-prices .p-heading {
+    display: block;
+    text-align: center;
+}
+
+.p-page-prices .p-text {
+    font-size: 20px;
+    font-family: "lato";
+    font-weight: 400;
+}
+
+.p-page-prices .p-cards {
+    margin-top: 30px;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    border: 1px solid #dad7d7;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.p-page-prices h5 {
+    font-size: 85px;
+    font-family: "lato";
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #93c797;
+    text-align: center;
+}
+
+.p-page-prices .p-cards .p-content {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    color: #d7d7d7;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "lato";
+}
+
+.p-page-prices .p-btn {
+    background-color: #93c797;
+    color: white;
+    height: 49px;
+    border: 2px solid #93c797;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.p-page-prices .p-cards:hover {
+    -moz-transform: scale(1.09);
+    -webkit-transform: scale(1.09);
+    -ms-transform: scale(1.09);
+    transform: scale(1.09);
+}
+
+.p-page-testimonial .p-heading {
+    text-align: center;
+}
+
+.p-page-testimonial .p-images {
+    position: absolute;
+    float: left;
+    left: 414px;
+}
+
+.p-page-testimonial .p-current {
+    padding: 8px 82px;
+    position: absolute;
+    left: 592px;
+}
+
+.p-page-testimonial .p-content {
+    position: absolute;
+    left: 88px;
+    padding: 38px 484px;
+}
+
+.p-page-download {
+    position: relative;
+    padding: 200px 0;
+}
+
+.p-page-download {
+    text-align: center;
+}
+
+.p-page-download .p-content {
+    background-color: #414042;
+    height: 200px;
+    margin-bottom: -200px;
+}
+
+.p-page-download h1 {
+    color: white;
+    font-size: 50px;
+    padding-top: 22px;
+}
+
+.p-page-download button {
+    background-color: #4bcaff;
+    height: 60px;
+    width: 190px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    box-shadow: 4px 5px 3px #6de2f5;
+}
+
+.p-page-download button:hover {
+    color: white;
+    box-shadow: none;
+}
+
+.p-page-contact {
+    position: relative;
+    background-image: url("../images/google-map-background.jpg");
+    height: 600px;
+    padding: 30px 0;
+}
+
+.p-page-contact .p-page-form {
+    height: 460px;
+    width: 324px;
+    background-color: rgba(75, 202, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.p-page-contact input {
+    padding: 5px;
+    width: 70%;
+    margin-bottom: 9px;
+}
+
+.p-page-contact .p-p {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px
+}
+
+.p-page-contact h3 {
+    font-size: 27px;
+    color: white;
+}
+
+.p-page-footer {
+    height: 100px;
+    background-color: #414042;
+    padding: 20px 0;
+}
+
+.p-page-footer .p-text {
+    font-family: "lato";
+    color: #fefefe;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .page {
+        width: 1138px;
+    }
+    .p-page-nav {
+        transition: all 0.3s ease;
+        padding: 20px;
+        margin-left: -100px;
+        font-family: "lato";
+    }
+    .p-page-header .p-link-logo img {
+        width: 70%;
+        margin-left: -18px;
+        margin-top: 11px;
+    }
+    .p-page-slider {
+        position: relative;
+        height: 600px;
+    }
+    .p-page-slider .p-text {
+        width: 60%;
+        padding-top: 14px;
+    }
+    .p-item-content {
+        position: absolute;
+        top: 239px;
+        left: 473px;
+        color: white;
+        font-size: 20px;
+    }
+    .p-item-btn {
+        position: absolute;
+        top: 480px;
+        right: 232px;
+    }
+    .p-page-features .p-cards {
+        position: relative;
+        padding: 5px;
+        margin-top: 30px;
+        width: 50%;
+        float: left;
+    }
+    .p-page-features {
+        position: relative;
+        padding: 30px 0;
+        margin-bottom: -50px;
+    }
+    .row {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .p-page-gallery .col-lg-3 {
+        position: relative;
+        width: 50%;
+        float: left;
+    }
+    .p-page-testimonial .p-text {
+        margin-top: -15px;
+        width: 300%;
+    }
+    .p-page-download {
+        text-align: center;
+        padding-top: 10px;
+    }
+    .p-page-testimonial {
+        height: 250px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .p-page-nav {
+        margin-top: -7px;
+    }
+    .p-page-features .p-cards {
+        position: relative;
+        padding: 5px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    .p-page-gallery .col-lg-3 {
+        position: relative;
+        width: 100%;
+    }
+}
